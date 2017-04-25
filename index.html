@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Магазин мороженного Gllacy</title>
+    <link href="css\style.css" rel="stylesheet">
   </head>
   <body>
       <header class="main-header">
-        <img src="#" alt="Логотип магазина Gllacy">
+        <img src="img/logo.png" width="154" height="64" alt="Логотип магазина Gllacy">
         <nav class="main-navigation">
           <ul>
             <li>
@@ -65,14 +66,14 @@
       </header>
       <main class="container">
         <div class="presentation-item">
-          <img scr="#" alt="Наше мороженное">
+          <img scr="img/ice1.png" width="1045" height="881" alt="Наше мороженное">
           <input type="radio" name="presentation-item-first" value="presentation-item" checked>
 	        <input type="radio" name="presentation-item-second" value="presentation-item">
 	        <input type="radio" name="presentation-item-third" value="presentation-item">
         </div>
         <section class="promo">
           <div class="promo-item">
-            <h2>Малинка даром!</h2>
+            <h2 class="promo-name">Малинка даром!</h2>
             <p>
               При покупке 2 кг любого фруктового мороженного,добавим в ваш
               заказ банку малинового варенья бесплатно.
@@ -80,7 +81,7 @@
             <a href="#" class="promo-item">Хочу варенья!</a>
           </div>
           <div class="promo-item">
-            <h2>Шоколадки даром</h2>
+            <h2 class="promo-name">Шоколадки даром</h2>
             <p>
               При покупке 2 кг пломбира, добавим в ваш заказ упаковку
               вкуснейшей шоколадной присыпки совершенно бесплатно.
@@ -90,26 +91,26 @@
         </section>
         <article class="hit-item">
           <article class="hit-item">
-            <img src="#" alt="Хит">
-            <img src="#" alt="Товар">
+            <img src="img/hit-1.png" width="61" heigth="61" alt="Хит">
+            <img src="img/hit-item-1.jpg" width="267" heigth="267" alt="Товар">
             <span class="hit-item-price">310 Р/кг</span>
             <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
           </article>
           <article class="hit-item">
-            <img src="#" alt="Хит">
-            <img src="#" alt="Товар">
+            <img src="img/hit-1.png" width="61" heigth="61" alt="Хит">
+            <img src="img/hit-item-2.jpg" width="267" heigth="267" alt="Товар">
             <span class="hit-item-price">380 Р/кг</span>
             <a href="#">Сливочно-кофейное с кусочками шоколада</a>
           </article>
           <article class="hit-item">
-            <img src="#" alt="Хит">
-            <img src="#" alt="Товар">
+            <img src="img/hit-1.png" width="61" heigth="61" alt="Хит">
+            <img src="img/hit-item-3.jpg" width="267" heigth="267" alt="Товар">
             <span class="hit-item-price">355 Р/кг</span>
             <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
           </article>
           <article class="hit-item">
-            <img src="#" alt="Хит">
-            <img src="#" alt="Товар">
+            <img src="img/hit-1.png" width="61" heigth="61" alt="Хит">
+            <img src="img/hit-item-4.jpg" width="267" heigth="267" alt="Товар">
             <span class="hit-item-price">415 Р/кг</span>
             <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
           </article>
@@ -158,7 +159,7 @@
             </p>
             <form action="#" method="post">
               <input type="text" placeholder="Электронная почта">
-              <input type="submit" class="btn" value="Отправить">
+              <input type="button" class="btn" value="Отправить">
             </form>
           </div>
         </div>
@@ -184,8 +185,7 @@
           <input type="submit" value="Закрыть">
           <input type="text" name="user-name" placeholder="Как вас зовут?">
           <input type="text" name="user-mail" placeholder="Ваша почта для ответа?">
-          <textarea name="user-text">
-            Напишите что-нибудь...
+          <textarea name="user-text" placeholder="Напишите что-нибудь...">
           </textarea>
           <input type="submit" value="Отправить" class="btn">
         </form>
@@ -204,7 +204,7 @@
             <a href="#">Экологические стандарты</a>
         </div>
         <div class="developer">
-          <img scr="#" alt="Логотип HTML Academy">
+          <img scr="img/logo-developer.png" width="108" height="38" alt="Логотип HTML Academy">
           <p> Сделано в
             <a href="#">HTML Academy</a>
             2016
