@@ -1,0 +1,22 @@
+body {
+  font-size: 16px;
+  line-height: 22px;
+  color: rgb(50, 50, 50);
+  font-family: Roboto;
+}
+
+.item-type {
+  font-size: 35px;
+  line-height: 41px;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: Roboto;
+}
+
+.promo-name {
+  font-size: 35px;
+  line-height: 41px;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: Roboto;
+}
