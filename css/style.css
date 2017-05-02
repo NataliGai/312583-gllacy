@@ -5,6 +5,7 @@ body {
   font-family: Roboto, sans-serif;
   background: rgba(55, 255, 0, 0.2);
   width: 1200px;
+  margin: 0 auto;
 }
 
 .item-type {
@@ -31,6 +32,7 @@ body {
   width: 1146px;
   height: 115px;
   margin: 0 27px;
+  font-size: 0;
   background: rgba(255, 155, 0, 0.4);
 }
 
@@ -44,23 +46,26 @@ body {
 .main-navigation {
   display: inline-block;
   width: 500px;
-  margin-left: 20px;
+  margin-left: 15px;
   padding-top: 30px;
-  margin-right: 160px;
-  vertical-align: bottom;
+  margin-right: 165px;
+  font-size: 16px;
+  vertical-align: center;
   background: rgba(255, 255, 0, 0.2);
 }
 
 .user-actions {
   display: inline-block;
   width: 300px;
-  vertical-align: bottom;
+  font-size: 16px;
+  vertical-align: center;
   background: rgba(255, 255, 0, 0.2);
 }
 
 .work-time {
   display: block;
   float: right;
+  font-size: 16px;
   width: 180px;
   background: rgba(255, 255, 0, 0.2);
 }
@@ -69,6 +74,7 @@ body {
   display: block;
   float: right;
   width: 170px;
+  font-size: 16px;
   clear: right;
   background: rgba(255, 255, 0, 0.2);
 }
@@ -108,22 +114,22 @@ body {
   width: 1146px;
   height: 368px;
   margin: 0 27px;
+  font-size: 0;
   background: rgba(105, 105, 0, 0.2);
 }
 
-.hit-item,
-.catalog-item {
+.hit-item {
   display: inline-block;
   width: 267px;
   height: 325px;
   margin-bottom: 35px;
   padding-top: 8px;
-  margin-right: 21px; /*должно быть 26px*/
+  margin-right: 26px;
+  font-size: 16px;
   background: rgba(255, 255, 0, 0.2);
 }
 
-.hit-item:last-child,
-.catalog-item:nth-child(4n) {
+.hit-item:last-child {
   margin-right: 0;
 }
 
@@ -166,27 +172,39 @@ body {
   margin-left: 27px;
   margin-right: 27px;
   margin-bottom: 40px;
+  font-size: 0;
   background: rgba(255, 255, 0, 0.2);
 }
 
 .new-in-blog {
   display: inline-block;
-  width: 286px;
-  height: 110px;
-  padding-left: 20px;
-  padding-right: 254px;
-  padding-top: 20px;
-  padding-bottom: 80px;
+  width: 560px;
+  height: 220px;
+/*  padding-left: 18px;
+  padding-right: 253px;
+  padding-top: 27px;
+  padding-bottom: 80px;*/
   margin-right: 13px;
+  box-sizing: border-box;
+  font-size: 16px;
   background: rgba(5, 255, 0, 0.2);
 }
 
 .dispatch {
   display: inline-block;
-  width: 495px;
-  height: 160px;
-  padding: 30px;
+  width: 560px;
+  height: 220px;
+/*  padding: 35px 24px 35px 25px;*/
   margin-left: 13px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background: rgba(5, 255, 0, 0.2);
+}
+
+.address-info{
+  width: 1200px;
+  height: 430px;
+  font-size: 0;
   background: rgba(5, 255, 0, 0.2);
 }
 
@@ -194,8 +212,10 @@ body {
   display: block;
   width: 247px;
   height: 252px;
+  font-size: 16px;
   margin-top: 60px;
   margin-left: 871px;
+  margin-bottom: 60px;
   padding-top: 25px;
   padding-bottom: 30px;
   padding-left: 30px;
@@ -235,4 +255,96 @@ body {
   width: 195px;
   height: 70px;
   background: rgba(205, 255, 10, 0.2);
+}
+
+.main-content {
+  width: 1148px;
+  margin: 0 26px;
+  background: rgba(105, 105, 0, 0.2);
+}
+
+.breadcrumps {
+  width: 267px;
+  height: 30px;
+  margin-top: -30px;
+  background: rgba(105, 205, 0, 0.8);
+}
+
+.item-type {
+  margin-top: 0;
+  margin-bottom: 0;
+  background: rgba(105, 105, 105, 0.2);
+}
+
+.filters {
+  width: 879px;
+  height: 135px;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  font-size: 0;
+  background: rgba(105, 205, 0, 0.3);
+}
+
+.filter-select {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 16px;
+  background: rgba(105, 105, 105, 0.2);
+}
+
+.filter-price {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 16px;
+  background: rgba(105, 105, 105, 0.2);
+}
+
+.filter-fat-item {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 16px;
+  background: rgba(105, 105, 105, 0.2);
+}
+
+.filter-additional-item {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 15px;
+  font-size: 16px;
+  background: rgba(105, 105, 105, 0.2);
+}
+
+
+.catalog-items {
+  width: 1148px;
+  height: 1195px;
+  font-size: 0;
+  margin-bottom: 35px;
+  background: rgba(105, 105, 0, 0.2);
+}
+
+.catalog-item {
+  display: inline-block;
+  width: 267px;
+  height: 365px;
+  margin-right: 13px;
+  margin-left: 13px;
+  font-size: 16px;
+  background: rgba(255, 255, 0, 0.2);
+}
+
+.catalog-item:nth-child(n+4),
+.catalog-item:first-child {
+  margin-left: 0;
+}
+
+.catalog-page {
+  display: inline-block;
+  width: 200px;
+  margin-left: 948px;
+  height: 35px;
+  padding-top: 30px;
+  padding-bottom: 12px;
+  font-size: 16px;
+  background: rgba(25, 255, 50, 0.5);
 }
