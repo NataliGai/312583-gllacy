@@ -135,7 +135,6 @@ body {
 
 .description {
   width: 1093px;
-  height: 270px;
   margin-bottom: 40px;
   margin-left: 27px;
   margin-right: 27px;
@@ -146,24 +145,18 @@ body {
   background: rgba(255, 255, 0, 0.2);
 }
 
-.description-item-left {
+.description-item {
   display: inline-block;
   width: 528px;
   height: 77px;
   margin-top: 10px;
-  margin-right: 13px;
+  margin-left: 26px;
   margin-bottom: 13px;
   background: rgba(255, 255, 0, 0.2);
 }
 
-.description-item-right {
-  display: inline-block;
-  width: 528px;
-  height: 77px;
-  margin-top: 10px;
-  margin-left: 13px;
-  margin-bottom: 13px;
-  background: rgba(255, 255, 0, 0.2);
+.description-item:nth-child(2n) {
+  margin-left: 0;
 }
 
 .content {
@@ -314,12 +307,10 @@ body {
   background: rgba(105, 105, 105, 0.2);
 }
 
-
 .catalog-items {
-  width: 1148px;
-  height: 1195px;
+  width: 1174px;
+  margin: 0 -13px;
   font-size: 0;
-  margin-bottom: 35px;
   background: rgba(105, 105, 0, 0.2);
 }
 
@@ -329,22 +320,16 @@ body {
   height: 365px;
   margin-right: 13px;
   margin-left: 13px;
+  vertical-align: top;
   font-size: 16px;
   background: rgba(255, 255, 0, 0.2);
 }
 
-.catalog-item:nth-child(n+4),
-.catalog-item:first-child {
-  margin-left: 0;
-}
-
 .catalog-page {
-  display: inline-block;
-  width: 200px;
-  margin-left: 948px;
   height: 35px;
   padding-top: 30px;
   padding-bottom: 12px;
+  text-align: right;
   font-size: 16px;
   background: rgba(25, 255, 50, 0.5);
 }
