@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Магазин мороженного Gllacy</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
       <header class="main-header">
@@ -69,7 +70,7 @@
       </header>
       <main class="container">
         <div class="presentation-item">
-          <img scr="img/ice1.png" width="1045" height="881" alt="Наше мороженное">
+          <img src="img/ice1.jpg" width="1045" height="881" alt="Наше мороженное">
           <input type="radio" name="presentation-item-first" value="presentation-item" checked>
 	        <input type="radio" name="presentation-item-second" value="presentation-item">
 	        <input type="radio" name="presentation-item-third" value="presentation-item">
@@ -84,7 +85,7 @@
             <a href="#" class="promo-item">Хочу варенья!</a>
           </div>
           <div class="promo-item-right">
-            <h2 class="promo-name">Шоколадки даром</h2>
+            <h2 class="promo-name">Шоколадки даром!</h2>
             <p>
               При покупке 2 кг пломбира, добавим в ваш заказ упаковку
               вкуснейшей шоколадной присыпки совершенно бесплатно.
@@ -99,19 +100,16 @@
             <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
           </article>
           <article class="hit-item">
-            <img src="img/hit-1.png" width="61" height="61" alt="Хит">
             <img src="img/hit-item-2.jpg" width="267" height="267" alt="Товар">
             <span class="hit-item-price">380 &#8381;/кг</span>
-          <a href="#">Сливочно-кофейное с кусочками шоколада</a>
+            <a href="#">Сливочно-кофейное с кусочками шоколада</a>
           </article>
           <article class="hit-item">
-            <img src="img/hit-1.png" width="61" height="61" alt="Хит">
             <img src="img/hit-item-3.jpg" width="267" height="267" alt="Товар">
             <span class="hit-item-price">355 &#8381;/кг</span>
             <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
           </article>
           <article class="hit-item">
-            <img src="img/hit-1.png" width="61" height="61" alt="Хит">
             <img src="img/hit-item-4.jpg" width="267" height="267" alt="Товар">
             <span class="hit-item-price">415 &#8381;/кг</span>
             <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
@@ -159,7 +157,7 @@
               всего самого вкусного, что у нас происходит. Обещаем не спамить
               и не сладить всякой ненужной ерунды. Честно =)
             </p>
-            <form action="#" method="post">
+            <form action="#" method="post" class="dispatch-data">
               <input type="text" placeholder="Электронная почта">
               <input type="button" class="btn" value="Отправить">
             </form>
@@ -205,7 +203,7 @@
             <a href="#">Экологические стандарты</a>
         </div>
         <div class="developer">
-          <img scr="img/logo-developer.png" width="108" height="38" alt="Логотип HTML Academy">
+          <img src="img/logo-developer.png" width="108" height="38" alt="Логотип HTML Academy">
           <p> Сделано в
             <a href="#">HTML Academy</a>
             2016
