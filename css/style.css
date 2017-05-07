@@ -1,27 +1,28 @@
 body {
   font-size: 16px;
   line-height: 22px;
-  color: rgb(50, 50, 50);
-  font-family: Roboto, sans-serif;
-  background: rgba(55, 255, 0, 0.2);
+  color: rgb(255, 255, 255);
+  font-family: "Roboto", "Arial", sans-serif;
+  background: rgb(132, 157, 143) ;
   width: 1200px;
   margin: 0 auto;
+  padding: 0;
 }
 
 .item-type {
   font-size: 35px;
   line-height: 41px;
-  color: #fff;
+  color: rgb(255, 255, 255);
   font-weight: bold;
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
 }
 
 .promo-name {
   font-size: 35px;
   line-height: 41px;
-  color: #fff;
+  color: rgb(255, 255, 255);
   font-weight: bold;
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
 }
 
 .hidden {
@@ -39,27 +40,83 @@ body {
 .logo {
   display: inline-block;
   width: 156px;
-  background: rgba(255, 255, 0, 0.2);
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 
 .main-navigation {
   display: inline-block;
   width: 500px;
-  margin-left: 15px;
-  padding-top: 30px;
+  margin-left: 13px;
+  margin-top: 18px;
   margin-right: 165px;
+  vertical-align: top;
+}
+
+.main-navigation ul {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  list-style: none;
+}
+
+.main-navigation li {
+  display: inline-block;
+  vertical-align: middle;
   font-size: 16px;
-  vertical-align: center;
-  background: rgba(255, 255, 0, 0.2);
+  line-height: 18px;
+  font-weight: bold;
+}
+
+.main-navigation a {
+  padding: 7px 13px;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+.main-navigation a:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
 }
 
 .user-actions {
+  position: relative;
   display: inline-block;
-  width: 300px;
+  max-width: 300px;
   font-size: 16px;
-  vertical-align: center;
-  background: rgba(255, 255, 0, 0.2);
+  margin-top: 16px;
+  vertical-align: top;
+}
+
+.user-actions ul {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  list-style: none;
+}
+
+.user-actions li {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+}
+
+.user-actions btn, /*????????????????????*/
+.user-actions a {
+  padding: 7px 14px;
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+.basket::before {
+  position: absolute;
+  content: " ";
+  left: 140px;
+  width: 25px;
+  height: 25px;
+
+  background: rgb(255, 0, 255) url("img/basket.png") no-repeat;
 }
 
 .work-time {
@@ -84,33 +141,50 @@ body {
   height: 506px;
   margin-left: 27px;
   margin-right: 27px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   background: rgba(105, 105, 0, 0.2);
+}
+
+.promo {
+  font-size: 0;
 }
 
 .promo-item-left {
   display: inline-block;
-  width: 560px;
+  width: 522px;
   margin-left: 27px;
   margin-right: 10px;
   margin-top: 5px;
-  margin-bottom: 30px;
+  margin-bottom: 38px;
+  padding-left: 18px;
+  padding-right: 20px;
   height: 229px;
-  background: rgba(255, 255, 0, 0.2);
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+  background: rgb(106, 12, 27) url("img/promo1.jpg") no-repeat;
+  border-radius: 10px;
 }
 
 .promo-item-right {
   display: inline-block;
-  width: 560px;
-  margin-left: 10px;
+  width: 521px;
+  margin-left: 16px;
   margin-right: 27px;
   margin-top: 5px;
-  margin-bottom: 30px;
+  margin-bottom: 38px;
+  padding-left: 18px;
+  padding-right: 20px;
   height: 229px;
-  background: rgba(255, 255, 0, 0.2);
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+  background: rgb(28, 13, 9) url("img/promo2.jpg") no-repeat;
+  border-radius: 10px;
 }
 
 .hit {
+  position: relative;
   width: 1146px;
   margin: 0 27px;
   font-size: 0;
@@ -126,6 +200,17 @@ body {
   margin-right: 26px;
   font-size: 16px;
   background: rgba(255, 255, 0, 0.2);
+}
+
+.hit-item::before {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0px;
+  width: 61px;
+  height: 61px;
+  border-radius: 10px;
+  background: rgb(255, 0, 255) url("img/hit-1.png") no-repeat;
 }
 
 .hit-item:last-child {
