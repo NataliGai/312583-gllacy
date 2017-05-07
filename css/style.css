@@ -203,47 +203,71 @@ body {
 }
 
 .hit {
-  position: relative;
   width: 1146px;
   margin: 0 27px;
   font-size: 0;
-  background: rgba(105, 105, 0, 0.2);
 }
 
 .hit-item {
+  position: relative;
   display: inline-block;
   width: 267px;
   vertical-align: top;
-  margin-bottom: 35px;
+  text-align: center;
+  margin-bottom: 36px;
   margin-right: 26px;
   font-size: 16px;
-  background: rgba(255, 255, 0, 0.2);
 }
 
 .hit-item::after {
   position: absolute;
-  content: " ";
+  content: "";
   top: 0;
   left: 0px;
+  display: block;
   width: 61px;
   height: 61px;
   border-radius: 50%;
   background: rgb(255, 255, 255) url("../img/hit-1.png") no-repeat;
 }
 
+.hit-item img,
+.catalog-item img {
+  border-radius: 50%;
+}
+
 .hit-item:last-child {
   margin-right: 0;
 }
 
+.hit-item-price {
+  display: block;
+  margin-top: -65px;
+  margin-bottom: 30px;
+  text-align: left;
+  font-size: 45px;
+  line-height: 45px;
+  text-shadow: 0px 1px 3px 0px rgba(49, 50, 53, 0.5);
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+.hit-item a {
+  font-size: 16px;
+  line-height: 22px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
 .description {
   width: 1093px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   margin-left: 27px;
   margin-right: 27px;
-  padding-top: 28px;
-  padding-left: 23px;
+  padding-top: 3px;
+  padding-left: 21px;
   padding-right: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
@@ -253,20 +277,32 @@ body {
 }
 
 .description-item {
+  position: relative;
   display: inline-block;
   vertical-align: top;
   width: 528px;
-  margin-top: 10px;
   margin-left: 26px;
   margin-bottom: 13px;
   font-size: 16px;
   line-height: 22px;
+  font-weight: normal;
   color: rgb(50, 50, 50);
   background: rgba(255, 255, 0, 0.2);
 }
 
 .description-item:nth-child(2n) {
   margin-left: 0;
+}
+
+.description-item::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  display: block;
+  width: 49px;
+  height: 49px;
+  background: url("../img/ice-cream.png") no-repeat;
 }
 
 .content {
