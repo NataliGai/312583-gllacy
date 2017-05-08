@@ -45,10 +45,10 @@
         <div class="user-actions">
           <ul>
             <li>
-              <input type="submit" class="btn" value="Поиск по сайту">
+              <input type="submit" class="user-action-search" value="Поиск">
             </li>
             <li>
-              <input type="submit" class="btn" value="Вход">
+              <input type="submit" class="user-action-exit" value="Вход">
             </li>
             <li>
               <a href="#" class="basket">Пусто</a>
@@ -65,15 +65,35 @@
           <a href="#">Забыли пароль?</a>
           <a href="#">Новая регистрация</a>"
         </form>
-        <span class="work-time"> С 10 до 20, ежедневно</span>
-        <span class="tel">8 812 450-25-25</span>
+        <div class="work-time">
+          С 10 до 20, ежедневно
+        </div>
+        <div class="tel">
+          8 812 450-25-25
+        </div>
       </header>
       <main class="container">
         <div class="presentation-item">
-          <img src="img/ice1.jpg" width="1045" height="881" alt="Наше мороженное">
+          <div>
+            <img src="img/ice1.jpg" width="1045" height="881" alt="Наше мороженное">
+            <h2 class="presentation-item-name">Крем-брюле и пломбир с малиновым джемом</h2>
+            <input type="submit" value="Давайте оба!" class="presentation-btn">
+          </div>
+          <div class="hidden">
+            <img src="img/ice1.jpg" width="1045" height="881" alt="Наше мороженное">
+            <h2 class="presentation-item-name">Шоколадный пломбир и лимонный сорбет</h2>
+            <input type="submit" value="Давайте оба!" class="presentation-btn">
+          </div>
+          <div class="hidden">
+            <img src="img/ice1.jpg" width="1045" height="881" alt="Наше мороженное">
+            <h2 class="presentation-item-name">Пломбир с помадкой и клубничный щербет</h2>
+            <input type="submit" value="Давайте оба!" class="presentation-btn">
+          </div>
+        </div>
+        <div class="presentation-radio">
           <input type="radio" name="presentation-item-first" value="presentation-item" checked>
-	        <input type="radio" name="presentation-item-second" value="presentation-item">
-	        <input type="radio" name="presentation-item-third" value="presentation-item">
+          <input type="radio" name="presentation-item-second" value="presentation-item">
+          <input type="radio" name="presentation-item-third" value="presentation-item">
         </div>
         <section class="promo">
           <div class="promo-item-left">
@@ -163,19 +183,21 @@
             </form>
           </div>
         </div>
-        <div class="address-info">
-          <div class="adress">
-            Адрес главного офиса и
-            офлайн магазина:
-            ул. Большая Конюшенная
-            19/8, Санкт-Петербург
+        <div class="address">
+          <div class="address-info">
+            <div class="adress">
+              Адрес главного офиса и
+              офлайн магазина:
+              ул. Большая Конюшенная
+              19/8, Санкт-Петербург
+            </div>
+            <p>
+              Для заказов по телефону:
+              <span class="tel">8 812 450-25-25</span>
+              (с 10 до 20 ежедневно)
+            </p>
+            <a href="#">Форма обратной связи</a>
           </div>
-          <p>
-            Для заказов по телефону:
-            <span class="tel">8 812 450-25-25</span>
-            (с 10 до 20 ежедневно)
-          </p>
-          <a href="#">Форма обратной связи</a>
         </div>
         <form action="#" method="post" class="hidden">
           <p>
