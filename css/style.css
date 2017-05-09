@@ -125,6 +125,7 @@ a:hover .menu-item {
 
 .user-action-search {
   width: 33px;
+  height: 33px; /*???????*/
   padding: 7px;
   box-sizing: border-box;
   color: rgba(0,0,0,0);
@@ -134,7 +135,7 @@ a:hover .menu-item {
 }
 
 .user-action-search:hover {
-  background: rgb(248, 247, 244) url("../img/glass-active.png") 16px 6px no-repeat;
+  background: rgb(248, 247, 244) url("../img/glass-active.png") 8px 7px no-repeat;
 }
 
 .user-action-exit {
@@ -435,11 +436,26 @@ a:hover .menu-item {
   padding-top: 19px;
   font-size: 16px;
   line-height: 22px;
-  background: url(../img/ice-cream.png) left top no-repeat;
 }
 
 .description-item:nth-child(2n) {
   margin-left: 0;
+}
+
+.description-1 {
+  background: url(../img/ice-cream.png) left top no-repeat;
+}
+
+.description-2 {
+  background: url(../img/cow.png) left top no-repeat;
+}
+
+.description-3 {
+  background: url(../img/leave.png) left top no-repeat;
+}
+
+.description-4 {
+  background: url(../img/temprecher.png) left top no-repeat;
 }
 
 .content {
@@ -476,12 +492,20 @@ a:hover .menu-item {
   font-weight: bold;
 }
 
-.dispatch {
+.pattern {
   display: inline-block;
   vertical-align: top;
   width: 560px;
-  height: 220px;
   margin-left: 13px;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: rgb(248, 247, 244) url(../img/dispatch.png);;
+}
+
+.dispatch {
+  width: 544px;
+  min-height: 204px;
   padding-top: 15px;
   padding-left: 22px;
   padding-right: 15px;
@@ -490,11 +514,28 @@ a:hover .menu-item {
   line-height: 22px;
   color: rgb(90, 90, 90);
   border-radius: 10px;
-  background:  rgb(248, 247, 244);
+  background: rgb(248, 247, 244);
 }
 
 .dispatch-data {
   margin-top: 35px;
+}
+
+.btn {
+  padding: 15px 24px;
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  background: #f26843;
+  background: -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 100px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  border: 0;
+  font-size: 18px;
+  margin-top: 12px;
 }
 
 .address {
@@ -517,39 +558,62 @@ a:hover .menu-item {
 }
 
 .address-info {
-  display: inline-block;
-  vertical-align: top;
-  text-align: left;
-  width: 146px;
+  float: right;
+  width: 304px;
+  margin-top: 65px;
+  margin-right: 27px;
+  padding: 33px 24px 29px;
   font-size: 14px;
   line-height: 20px;
+  text-align: left;
   color: #323232;
-  margin: 65px 0px 60px 871px;
-  padding: 28px 126px 30px 25px;
-  background:  rgb(255, 255, 255);
+  background: #fff;
   border-radius: 10px;
+  box-sizing: border-box;
+}
+/*
+.address-info-name {
+  margin-top: 15px;
+  margin-left: 28px;
+  margin-right: 40px;
+  font-size: 14px;
+  line-height: 20px;
+
 }
 
 .address-name {
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
-  color: #323232;
-  padding-right: 69px;
+  margin-top: -12px;
+  margin-bottom: 10px;
 }
 
+.address-info-tel {
+
+}
+
+.address-info .tel {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+  margin-top: -6px;
+
+}
+*/
 .main-footer {
   width: 1146px;
   margin-top: 15px;
   margin-left: 27px;
   margin-right: 27px;
+  font-size: 0;
   background: rgba(5, 255, 0, 0.2);
 }
 
 .network-contacts {
   display: inline-block;
   vertical-align: top;
-  text-align: center;
+  text-align: left;
   width: 220px;
   margin-top: 10px;
   margin-right: 170px;
@@ -561,9 +625,11 @@ a:hover .menu-item {
   vertical-align: middle;
   width: 32px;
   height: 32px;
-  margin-left: 10px;
+  margin-right: 10px;
   font-size: 0;
   opacity: 0.8;
+  border: 3px solid rgba(194, 206, 199, 0.7);
+  border-radius: 50%;
 }
 
 .network-btn-tw {
@@ -617,17 +683,44 @@ a:hover .menu-item {
 .work-documents {
   display: inline-block;
   vertical-align: top;
-  width: 356px;
+  width: 350px;
   margin-top: 10px;
   margin-right: 195px;
-  background: rgba(205, 255, 10, 0.2);
+  background: url(../img/heart.png)  8px 5px no-repeat, rgba(205, 255, 10, 0.2);
+
+}
+
+.work-documents a {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  margin-left: 30px;
+  background-color: #323245;
+  font-size: 13px;
+  line-height: 18px;
+  color: #fff;
+  text-decoration: none;
 }
 
 .developer {
   display: inline-block;
   vertical-align: top;
-  width: 195px;
-  background: rgba(205, 255, 10, 0.2);
+  width: 190px;
+  margin-top: -6px;
+  margin-left: 19px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #fefefe;
+}
+
+.developer img {
+  margin-bottom: -13px;
+}
+
+.developer a {
+  text-decoration: none;
+  border-bottom: rgba(255, 255, 255, 0.3) 1px solid;
+  color: #fefefe;
 }
 
 .main-content {
