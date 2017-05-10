@@ -70,12 +70,11 @@ body {
 
 .main-navigation a {
   padding: 7px 14px;
-  color: rgb(255, 255, 255);
+  color: #fff;
   text-decoration: none;
 }
 
-a:hover .menu-item {
-  padding: 6px 13px;
+.main-navigation a:hover {
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
   border-radius: 20px;
@@ -83,7 +82,12 @@ a:hover .menu-item {
 }
 
 .selected {
+  background-color: #d07058;
+  border-radius: 20px;
+}
 
+.selected .menu-item {
+  border: none;
 }
 
 .hidden {
@@ -112,15 +116,24 @@ a:hover .menu-item {
 
 .basket {
   display: block;
-  width: 117px;
+  width: 119px;
   padding: 7px 14px 7px 50px;
   box-sizing: border-box;
   text-decoration: none;
   font-size: 16px;
   line-height: 18px;
-  color: rgb(255, 255, 255);
+  color: #fff;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.3) url("../img/basket.png") 16px 6px no-repeat;
+}
+
+.full {
+  width: 125px;
+  padding: 7px 8px 7px 50px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #323232;
+  background: #f7f6f3 url("../img/basket-full.png") 16px 6px no-repeat;
 }
 
 .user-action-search {
@@ -360,6 +373,7 @@ a:hover .menu-item {
   margin-bottom: 36px;
   margin-right: 26px;
   font-size: 16px;
+  line-height: 18px;
 }
 
 .hit-item::after {
@@ -374,16 +388,17 @@ a:hover .menu-item {
   background: rgb(255, 255, 255) url("../img/hit-1.png") no-repeat;
 }
 
+.hit-item:last-child {
+  margin-right: 0;
+}
+
 .hit-item img,
 .catalog-item img {
   border-radius: 50%;
 }
 
-.hit-item:last-child {
-  margin-right: 0;
-}
-
-.hit-item-price {
+.hit-item-price,
+.catalog-item-price {
   display: block;
   margin-top: -65px;
   margin-bottom: 30px;
@@ -392,10 +407,11 @@ a:hover .menu-item {
   line-height: 45px;
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
   font-weight: bold;
-  color: rgb(255, 255, 255);
+  color: #fff;
 }
 
-.hit-item a {
+.hit-item a,
+.catalog-item a {
   font-size: 16px;
   line-height: 22px;
   color: #fff;
@@ -534,7 +550,7 @@ a:hover .menu-item {
   border-radius: 100px;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
   border: 0;
-  font-size: 18px;
+  line-height: 18px;
   margin-top: 12px;
 }
 
@@ -733,7 +749,29 @@ a:hover .menu-item {
   width: 267px;
   height: 30px;
   margin-top: -30px;
+  margin-bottom: 10px;
   background: rgba(105, 205, 0, 0.8);
+}
+
+.breadcrumps ul {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  list-style: none;
+}
+
+.breadcrumps li {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.breadcrumps a {
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  text-decoration: none;
 }
 
 .item-type {
@@ -780,6 +818,29 @@ a:hover .menu-item {
   background: rgba(105, 105, 105, 0.2);
 }
 
+.filter-btn {
+  padding: 7px 27px;
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  background-color: rgba(255, 255, 255, 0.188);
+  border-radius: 20px;
+}
+
+.filter-btn:hover {
+  color: #323232;
+  background-color: #fbfbfb;
+  border: none;
+}
+
+.filter-btn:active {
+  color: #323232;
+  background-color: #ededed;
+  border: none;
+  box-shadow: inset 0px 2px 1px rgba(105, 105, 105, 0.004);
+}
+
 .catalog-items {
   width: 1174px;
   margin: 0 -13px;
@@ -790,19 +851,50 @@ a:hover .menu-item {
 .catalog-item {
   display: inline-block;
   width: 267px;
-  height: 365px;
+  height: 324px;
   margin-right: 13px;
   margin-left: 13px;
+  padding-top: 7px;
+  padding-bottom: 34px;
   vertical-align: top;
-  font-size: 16px;
+  text-align: center;
   background: rgba(255, 255, 0, 0.2);
 }
 
 .catalog-page {
+  text-align: right;
   height: 35px;
   padding-top: 30px;
   padding-bottom: 12px;
-  text-align: right;
+}
+
+.catalog-page a {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  width: 28px;
+  height: 28px;
+  padding-left: 5px;
   font-size: 16px;
-  background: rgba(25, 255, 50, 0.5);
+  line-height: 18px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.selected-page {
+  font-size: 16px;
+  line-height: 18px;
+  color: #323232;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.catalog-page-back {
+  text-indent: -1000px;
+  background: url("../img/back.png") no-repeat;
+}
+
+.catalog-page-forward {
+  text-indent: -1000px;
+  background: url("../img/forward.png") no-repeat;
 }
