@@ -19,16 +19,25 @@
             </a>
             <div class="user-actions">
               <ul>
-                <li>
+                <li class="search">
                   <input type="submit" class="user-action-search" value="Поиск">
                   <div class="modal-search">
                     <input class="search-text" type="text" placeholder="Что ищем?">
                   </div>
                 </li>
-                <li>
+                <li class="user-enter">
                   <input type="submit" class="user-action-exit" value="Вход">
+                  <form action="#" method="post" class="modal-exit">
+                    <input type="text" name="login" placeholder="Электронная почта" class="exit-text">
+                    <input type="password" name="password" placeholder="Пароль" class="exit-text">
+                    <input type="submit" value="Войти" class="btn">
+                    <div class="exit-links">
+                      <a href="#">Забыли пароль?</a>
+                      <a href="#">Новая регистрация</a>
+                    </div>
+                  </form>
                 </li>
-                <li>
+                <li class="user-basket">
                   <a href="#" class="basket">Пусто</a>
                 </li>
               </ul>
@@ -59,13 +68,6 @@
                 </li>
               </ul>
             </nav>
-            <form action="#" method="post" class="hidden">
-              <input type="text" name="login" placeholder="Электронная почта">
-              <input type="password" name="password" placeholder="Пароль">
-              <input type="submit" value="Войти">
-              <a href="#">Забыли пароль?</a>
-              <a href="#">Новая регистрация</a>"
-            </form>
             <div class="work-time">
               С 10 до 20, ежедневно
             </div>
