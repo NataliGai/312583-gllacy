@@ -16,6 +16,9 @@
         <ul>
           <li>
             <input type="submit" class="user-action-search" value="Поиск">
+            <div class="modal-search">
+              <input class="search-text" type="text" placeholder="Что ищем?">
+            </div>
           </li>
           <li>
             <input type="submit" class="user-action-exit" value="Вход">
@@ -31,6 +34,13 @@
             <a class="selected" href="#">
               <span class="menu-item">Каталог</span>
             </a>
+            <div class="modal-menu-catalog">
+              <a href="#">Новинки</a>
+              <a class="selected-item" href="#">Сливочное</a>
+              <a href="#">Щербеты</a>
+              <a href="#">Фруктовый лед</a>
+              <a href="#">Мелорин</a>
+            </div>
           </li>
           <li>
             <a href="#">
@@ -44,26 +54,6 @@
           </li>
         </ul>
       </nav>
-      <ul class="main-menu-catalog hidden">
-        <li>
-          <a href="#">Новинки</a>
-        </li>
-        <li>
-          <a href="#">Сливочное</a>
-        </li>
-        <li>
-          <a href="#">Щербеты</a>
-        </li>
-        <li>
-          <a href="#">Фруктовый лед</a>
-        </li>
-        <li>
-          <a href="#">Мелорин</a>
-        </li>
-      </ul>
-      <div class="search hidden">
-        <input type="text" placeholder="Что ищем?">
-      </div>
       <form action="#" method="post" class="hidden">
         <input type="text" name="login" placeholder="Электронная почта">
         <input type="password" name="password" placeholder="Пароль">
@@ -71,6 +61,11 @@
         <a href="#">Забыли пароль?</a>
         <a href="#">Новая регистрация</a>"
       </form>
+      <div class="modal-basket">
+        <table>
+
+        </table>
+      </div>
       <div class="work-time">
         С 10 до 20, ежедневно
       </div>
@@ -104,7 +99,7 @@
         <form action="#" name="filter" method="get" class="filters">
           <div class="filter-select">
             <label class="filter">
-              Сортировка
+              Сортировка:
               <br>
               <select name="category" id="filter-category" class="filter-sort">
                 <option value="popular">по популярности</option>
@@ -118,43 +113,47 @@
             <label class="filter">
               Цена: 100 руб. - 500 руб.
               <br>
-              <input type="range" min="100" max="500" step="1">
+              <input type="range" min="100" max="500" step="1" class="price">
             </label>
           </div>
           <div class="filter-fat-item">
-            Жирность:
+            <span class="filter">
+              Жирность:
+            </span>
             <div class="filter-radio">
               <label>
-                <input type="radio" name="fat-1" id="filter-fat-1" value="fat">0%
+                <input type="radio" name="fat-1" id="filter-fat-1" value="fat" class="hidden">0%
               </label>
               <label>
-                <input type="radio" name="fat-2" id="filter-fat-2" value="fat" checked>до 10%
+                <input type="radio" name="fat-2" id="filter-fat-2" value="fat" class="hidden" checked>до 10%
               </label>
               <label>
-                <input type="radio" name="fat-3" id="filter-fat-3" value="fat">до 30%
+                <input type="radio" name="fat-3" id="filter-fat-3" value="fat" class="hidden">до 30%
               </label>
               <label>
-                <input type="radio" name="fat-4" id="filter-fat-4" value="fat">свыше 30%
+                <input type="radio" name="fat-4" id="filter-fat-4" value="fat" class="hidden">свыше 30%
               </label>
             </div>
           </div>
           <div class="filter-additional-item">
-            Наполнители:
+            <span class="filter">
+              Наполнители:
+            </span>
             <div class="filter-additional">
               <label>
-                <input type="checkbox" name="chocolate" id="filter-add-1" checked>шоколадные
+                <input type="checkbox" name="chocolate" id="filter-add-1" class="checkbox-checked" checked>шоколадные
               </label>
               <label>
-                <input type="checkbox" name="chocolate" id="filter-add-2" checked>сахарные присыпки
+                <input type="checkbox" name="chocolate" id="filter-add-2" class="checkbox-checked" checked>сахарные присыпки
               </label>
               <label>
-                <input type="checkbox" name="fruit" id="filter-add-3" checked>фрукты
+                <input type="checkbox" name="fruit" id="filter-add-3" class="checkbox-empty">фрукты
               </label>
               <label>
-                <input type="checkbox" name="syrup" id="filter-add-4" checked>сиропы
+                <input type="checkbox" name="syrup" id="filter-add-4" class="checkbox-empty">сиропы
               </label>
               <label>
-                <input type="checkbox" name="jam" id="filter-add-5" checked>джемы
+                <input type="checkbox" name="jam" id="filter-add-5" class="checkbox-empty">джемы
               </label>
             </div>
           </div>
@@ -173,11 +172,12 @@
             <a href="#">Сливочно-кофейное с кусочками шоколада</a>
             <input type="submit" class="btn hidden" value="Быстрый просмотр">
           </article>
-          <article class="catalog-item">
+          <article class="catalog-item active-item">
             <img src="img/hit-item-3.jpg" width="267" height="267" alt="Товар">
             <span class="catalog-item-price">355 &#8381;/кг</span>
             <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
-            <input type="submit" class="btn hidden" value="Быстрый просмотр">
+            <div class="active-item-look">  </div>
+            <input type="submit" class="btn btn-look" value="Быстрый просмотр">
           </article>
           <article class="catalog-item">
             <img src="img/hit-item-4.jpg" width="267" height="267" alt="Товар">
