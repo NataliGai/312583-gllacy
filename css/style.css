@@ -108,7 +108,7 @@ body {
   max-width: 400px;
   font-size: 16px;
   margin-left: 20px;
-  margin-top: 16px;
+  margin-top: 11px;
 }
 .user-actions ul {
   margin: 0;
@@ -694,7 +694,6 @@ li.main-navigation:hover .modal-menu-catalog {
   width: 304px;
   margin-top: 65px;
   margin-right: 27px;
-  padding: 33px 24px 29px;
   font-size: 14px;
   line-height: 20px;
   text-align: left;
@@ -703,43 +702,51 @@ li.main-navigation:hover .modal-menu-catalog {
   border-radius: 10px;
   box-sizing: border-box;
 }
-/*
+
 .address-info-name {
-  margin-top: 15px;
+  margin-top: 30px;
   margin-left: 28px;
-  margin-right: 40px;
   font-size: 14px;
   line-height: 20px;
-
+  width: 157px;
 }
 
 .address-name {
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
-  margin-top: -12px;
-  margin-bottom: 10px;
+  width: 230px;
+  margin-left: 28px;
+  padding-bottom: 20px;
 }
 
 .address-info-tel {
-
+  margin-left: 28px;
 }
 
-.address-info .tel {
+.tel-1 {
   font-size: 18px;
   line-height: 22px;
   font-weight: bold;
-  margin-top: -6px;
-
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
-*/
+
+.address .btn {
+  margin-left: 28px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #fefefe;
+}
+
 .main-footer {
   width: 1146px;
   margin-top: 15px;
   margin-left: 27px;
   margin-right: 27px;
   font-size: 0;
-  background: rgba(5, 255, 0, 0.2);
 }
 
 .network-contacts {
@@ -749,7 +756,6 @@ li.main-navigation:hover .modal-menu-catalog {
   width: 220px;
   margin-top: 10px;
   margin-right: 170px;
-  background: rgba(205, 255, 10, 0.2);
 }
 
 .network-btn {
@@ -818,7 +824,17 @@ li.main-navigation:hover .modal-menu-catalog {
   width: 350px;
   margin-top: 10px;
   margin-right: 195px;
-  background: url(../img/heart.png)  8px 5px no-repeat, rgba(205, 255, 10, 0.2);
+  background: url(../img/heart.png)  8px 5px no-repeat;
+}
+
+.work-document-1 {
+  float: left;
+  width: 146px;
+}
+
+.work-document-2 {
+  width: 200px;
+  float: left;
 }
 
 .work-documents a {
@@ -826,7 +842,6 @@ li.main-navigation:hover .modal-menu-catalog {
   vertical-align: top;
   text-align: left;
   margin-left: 30px;
-  background-color: #323245;
   font-size: 13px;
   line-height: 18px;
   color: #fff;
@@ -881,10 +896,18 @@ li.main-navigation:hover .modal-menu-catalog {
 }
 
 .breadcrumps a {
+  position: relative;
   font-size: 14px;
   line-height: 16px;
   color: #fff;
   text-decoration: none;
+}
+
+.breadcrumps a::after {
+  position: absolute;
+  content: '\BB';
+  top: 0;
+  left: 55px;
 }
 
 .item-type {
@@ -1038,20 +1061,8 @@ height: 23px;
   border: 2px solid #fff;
 }
 
-
-.radio-fat input[type="radio"] +
-.radio-indicator-1 {
-  position: absolute;
-  top: -3px;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  border: 1px solid #fff;
-  border-radius: 50%;
-}
-
-.radio-fat input[type="radio"] +
-.radio-indicator-1::after {
+.radio-fat input[type="radio"]:checked +
+.radio-indicator::after {
   content: " ";
   position: absolute;
   top: 3px;
@@ -1063,14 +1074,14 @@ height: 23px;
   background: #f8f7f4;
 }
 
-.radio-fat input[type="radio"] +
-.radio-indicator-1:hover {
+.radio-fat input[type="radio"]:checked +
+.radio-indicator:hover {
   border: 2px solid #fff;
 }
 
 /* заблокировано
-.radio-fat input[type="radio"] +
-.radio-indicator-1:,
+.radio-fat input[type="radio"]:checked +
+.radio-indicator:,
 .radio-fat input[type="radio"] +
 .radio-indicator-: {
   opacity: 0.4;
@@ -1102,31 +1113,26 @@ height: 23px;
   left: 0;
   width: 26px;
   height: 26px;
-  background: url("../img/checkbox.png") no-repeat center center;
-}
-
-.filter-checkbox input[type="checkbox"]+
-.checkbox-indicator:hover  {
-  background: url("../img/checkbox-hover.png") no-repeat center center;
-}
-
-.filter-checkbox input[type="checkbox"] +
-.checkbox-indicator-1 {
-  position: absolute;
-  top: -3px;
-  left: 0;
-  width: 26px;
-  height: 26px;
   background: url("../img/checkbox-empty.png") no-repeat center center;
 }
 
 .filter-checkbox input[type="checkbox"]+
-.checkbox-indicator-1:hover  {
+.checkbox-indicator:hover  {
   background: url("../img/checkbox-empty-hover.png") no-repeat center center;
 }
+
+.filter-checkbox input[type="checkbox"]:checked +
+.checkbox-indicator {
+  background: url("../img/checkbox.png") no-repeat center center;
+}
+
+.filter-checkbox input[type="checkbox"]:checked+
+.checkbox-indicator:hover  {
+  background: url("../img/checkbox-hover.png") no-repeat center center;
+}
 /*                                                  для блокировки
-.filter-checkbox input[type="checkbox"]+
-.checkbox-indicator-1:,
+.filter-checkbox input[type="checkbox"]:checked+
+.checkbox-indicator:,
 .filter-checkbox input[type="checkbox"]+
 .checkbox-indicator: {
   opacity: 0.4;
@@ -1470,4 +1476,16 @@ td.basket-item-2 + td {
 .search-text:focus,
 .dispatch-text:focus {
   border: 2px solid #8fbdec;
+}
+
+.exit-text:focus,
+.exit-text:hover {
+  width: 220px;
+  height: 35px;
+}
+
+.search-text:focus,
+.search-text:hover {
+  width: 293px;
+  height: 36px;
 }
