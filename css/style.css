@@ -35,6 +35,10 @@ body {
   font-size: 0;
 }
 
+.main-header li {
+  min-height: 40px;
+}
+
 .logo {
   display: inline-block;
   width: 156px;
@@ -62,10 +66,6 @@ body {
   font-size: 16px;
   line-height: 18px;
   font-weight: bold;
-}
-
-.main-header li {
-  min-height: 40px;
 }
 
 .menu-item {
@@ -195,13 +195,20 @@ body {
   font-weight: bold;
 }
 
+.catalog {
+  position: relative;
+}
+
 .modal-menu-catalog {
   position: absolute;
+  z-index: 2;
   display: none;
-  top: 59px;
-  left: 261px;
+  top: 30px;
+  left: 0;
   width: 142px;
   padding: 0;
+  padding-top: 6px;
+  padding-bottom: 6px;
   border-radius: 5px;
   background-color: #f8f7f4;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
@@ -211,19 +218,31 @@ body {
   display: block;
   padding-right: 9px;
   padding-left: 20px;
-  padding-top: 10px;
+  margin-top: 4px;
   color: #323232;
   font-size: 14px;
   line-height: 16px;
+  font-weight: normal;
   text-decoration: none;
 }
 
 .modal-menu-catalog a:first-child {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 5px;
   padding-bottom:  10px;
-  font-size: 16px;
-  line-height: 18px;
   font-weight: bold;
-  border-bottom: 1px solid #d1d0ce;
+}
+
+.modal-menu-catalog a:first-child:after {
+    content: "";
+    display: block;
+    height: 1px;
+    background: #d1d0ce;
+    width: 112px;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
 }
 
 .modal-menu-catalog a:hover {
@@ -614,9 +633,10 @@ li.main-navigation:hover .modal-menu-catalog {
 .dispatch-text {
   width: 346px;
   height: 40px;
-  margin-right: 10px;
+  margin-right: 8px;
   padding-left: 15px;
   border-radius: 5px;
+  border: 1px solid #d3d3d2;
 }
 
 .btn {
@@ -915,7 +935,8 @@ li.main-navigation:hover .modal-menu-catalog {
   color: #fff;
 }
 
-.price {                /*?????*/
+.price {
+  position: relative;
   border-radius: 20px;
   background-color: #abbcb2;
   width: 190px;
@@ -926,6 +947,45 @@ li.main-navigation:hover .modal-menu-catalog {
   font-size: 16px;
   line-height: 18px;
   color: #fff;
+}
+
+.scale {
+  width: 188px;
+  height: 4px;
+  background: #cbd4cd;
+}
+
+.bar {
+  position: absolute;
+  top: 0;
+  left: 35px;
+  width: 87px;
+  height: 4px;
+  background: #f8f7f4;
+}
+
+.price-toggle {
+  position: absolute;
+  top: 8px;
+  width: 20px;
+  height: 20px;
+  background: #f8f7f4;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.price-toggle-min {
+  left: 18px;
+}
+
+.price-toggle-max {
+  left: 60%;
+}
+
+.price-toggle:hover {
+cursor: pointer;
+width: 23px;
+height: 23px;
 }
 
 .filter-fat-item {
@@ -950,19 +1010,71 @@ li.main-navigation:hover .modal-menu-catalog {
   color: #fff;
 }
 
-.filter-radio label {
+.radio-fat {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
   display: inline-block;
   vertical-align: middle;
-  text-align: center;
+}
+
+.radio-fat input[type="radio"] {
+  display: none;
+}
+
+.radio-fat input[type="radio"] +
+.radio-indicator {
+  position: absolute;
+  top: -3px;
+  left: 0;
   width: 20px;
   height: 20px;
-  margin-top: 7px;
-  margin-right: 10px;
-  background-color: transparent;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   border-radius: 50%;
-  cursor: pointer;
 }
+
+.radio-fat input[type="radio"] +
+.radio-indicator:hover {
+  border: 2px solid #fff;
+}
+
+
+.radio-fat input[type="radio"] +
+.radio-indicator-1 {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+.radio-fat input[type="radio"] +
+.radio-indicator-1::after {
+  content: " ";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background: #f8f7f4;
+}
+
+.radio-fat input[type="radio"] +
+.radio-indicator-1:hover {
+  border: 2px solid #fff;
+}
+
+/* заблокировано
+.radio-fat input[type="radio"] +
+.radio-indicator-1:,
+.radio-fat input[type="radio"] +
+.radio-indicator-: {
+  opacity: 0.4;
+}*/
 
 .filter-additional-item {
   display: inline-block;
@@ -971,8 +1083,55 @@ li.main-navigation:hover .modal-menu-catalog {
   font-size: 16px;
   line-height: 18px;
   color: #fff;
-  background: rgba(105, 105, 105, 0.2);
 }
+
+.filter-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.filter-checkbox {
+  position: relative;
+  padding-left: 34px;
+  cursor: pointer;
+}
+
+.filter-checkbox input[type="checkbox"] +
+.checkbox-indicator {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  background: url("../img/checkbox.png") no-repeat center center;
+}
+
+.filter-checkbox input[type="checkbox"]+
+.checkbox-indicator:hover  {
+  background: url("../img/checkbox-hover.png") no-repeat center center;
+}
+
+.filter-checkbox input[type="checkbox"] +
+.checkbox-indicator-1 {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  background: url("../img/checkbox-empty.png") no-repeat center center;
+}
+
+.filter-checkbox input[type="checkbox"]+
+.checkbox-indicator-1:hover  {
+  background: url("../img/checkbox-empty-hover.png") no-repeat center center;
+}
+/*                                                  для блокировки
+.filter-checkbox input[type="checkbox"]+
+.checkbox-indicator-1:,
+.filter-checkbox input[type="checkbox"]+
+.checkbox-indicator: {
+  opacity: 0.4;
+}
+*/
 
 .filter-additional {
   border-radius: 20px;
@@ -985,11 +1144,7 @@ li.main-navigation:hover .modal-menu-catalog {
   line-height: 18px;
   color: #fff;
 }
-/*
-.checkbox-checked {
-  background: url(../img/checkbox.png) no-repeat;
-}
-*/
+
 .filter-btn {
   margin-top: 23px;
   padding: 7px 27px;
@@ -1004,7 +1159,6 @@ li.main-navigation:hover .modal-menu-catalog {
 .filter-btn:hover {
   color: #323232;
   background-color: #fbfbfb;
-  border: none;
 }
 
 .filter-btn:active {
@@ -1136,6 +1290,7 @@ a.catalog-page-forward {
 
 .modal-search {
   position: absolute;
+  z-index: 2;
   display: none;
   top: 35px;
   right: 0;
@@ -1153,12 +1308,13 @@ a.catalog-page-forward {
   height: 40px;
   margin-top: 20px;
   margin-left: 15px;
-  margin-rigth: 15px;
+  margin-right: 15px;
   padding-left: 15px;
   font-size: 14px;
   line-height: 24px;
   color: #999999;
   border-radius: 5px;
+  border: 1px solid #d3d3d2;
 }
 
 .search:hover .modal-search {
@@ -1167,6 +1323,7 @@ a.catalog-page-forward {
 
 .modal-exit {
   position: absolute;
+  z-index: 2;
   display: none;
   top: 59px;
   right: 235px;
@@ -1191,6 +1348,7 @@ a.catalog-page-forward {
   color: #999999;
   margin-bottom: 20px;
   border-radius: 5px;
+  border: 1px solid #d3d3d2;
 }
 
 .modal-exit .btn {
@@ -1220,11 +1378,16 @@ a.catalog-page-forward {
   display: block;
 }
 
+.user-basket {
+  position: relative;
+}
+
 .modal-basket {
   position: absolute;
+  z-index: 2;
   display: none;
-  top: 63px;
-  right: 100px;
+  top: 35px;
+  right: 0;
   width: 510px;
   padding-right: 15px;
   padding-top: 10px;
@@ -1259,6 +1422,12 @@ a.catalog-page-forward {
 
 .modal-basket td:nth-child(3) {
   width: 218px;
+  text-align: left;
+  padding-left: 12px;
+}
+
+td.basket-item-2 + td {
+    padding-top: 20px;
 }
 
 .item-price {
