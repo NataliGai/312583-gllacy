@@ -212,17 +212,19 @@
               <button class="btn">Форма обратной связи</button>
             </div>
           </div>
-          <form action="#" method="post" class="hidden">
-            <p>
+          <form action="#" method="post" class="modal-connect-form">
+            <div class="connect-form-name">
               Мы обязательно вам ответим!
-            </p>
-            <input type="submit" value="Закрыть">
+            </div>
+            <button type="button" value="Закрыть" class="modal-connect-close">
+            </button>
             <input type="text" name="user-name" placeholder="Как вас зовут?">
             <input type="text" name="user-mail" placeholder="Ваша почта для ответа?">
             <textarea name="user-text" placeholder="Напишите что-нибудь...">
             </textarea>
             <input type="submit" value="Отправить" class="btn">
           </form>
+          <div class="modal-overlay"></div>
           <footer class="main-footer">
             <div class="network-contacts">
               <a class="network-btn network-btn-tw" href="#">Twitter</a>
