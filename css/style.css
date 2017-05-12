@@ -231,7 +231,7 @@ body {
 .modal-menu-catalog a:first-child {
   position: relative;
   margin-top: 0;
-  margin-bottom: 5px;
+  margin-bottom: 0;
   padding-bottom:  10px;
   font-weight: bold;
 }
@@ -402,6 +402,37 @@ li.main-navigation:hover .modal-menu-catalog {
 #btn-2:checked ~ .presentation-wrapper label[for="btn-2"],
 #btn-3:checked ~ .presentation-wrapper label[for="btn-3"] {
   background-color: #fff;
+}
+
+.btn {
+  padding: 15px 24px;
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  background: #f26843;
+  background: -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 100px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  border: 0;
+  line-height: 18px;
+  margin-top: 12px;
+}
+
+.btn:hover {
+  background-image: -moz-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  box-shadow: 0px 1px 2px rgba(172, 16, 0, 0.004);
+}
+
+.btn:active {
+  background-image: -moz-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  background-image: linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  box-shadow: inset 0px 2px 2px rgba(148, 39, 24, 0.004);
 }
 
 .promo {
@@ -603,7 +634,8 @@ li.main-navigation:hover .modal-menu-catalog {
   font-weight: bold;
 }
 
-.new-in-blog a {
+.new-in-blog a:hover,
+.new-in-blog a:active {
     color: #e84d37;
 }
 
@@ -645,35 +677,10 @@ li.main-navigation:hover .modal-menu-catalog {
   border: 1px solid #d3d3d2;
 }
 
-.btn {
-  padding: 15px 24px;
-  color: #ffffff;
-  font-size: 16px;
-  text-decoration: none;
-  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-  background: #f26843;
-  background: -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
-  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
-  background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
-  border-radius: 100px;
-  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
-  border: 0;
-  line-height: 18px;
-  margin-top: 12px;
-}
-
-.btn:hover {
-  background-image: -moz-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  box-shadow: 0px 1px 2px rgba(172, 16, 0, 0.004);
-}
-
-.btn:active {
-  background-image: -moz-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
-  background-image: linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
-  box-shadow: inset 0px 2px 2px rgba(148, 39, 24, 0.004);
+.dispatch-text:hover,
+.dispatch-text:focus {
+  width: 344px;
+  height: 38px;
 }
 
 .address {
@@ -1218,11 +1225,12 @@ li.main-navigation:hover .modal-menu-catalog {
   text-align: center;
 }
 
-.catalog-item:hover {
-  display: block;
+.hit-item {
+  position: relative;
 }
 
-.catalog-item:hover::before {
+.catalog-item:hover::before,
+.hit-item:hover::before {
   content: "";
   z-index: 1;
   position: absolute;
@@ -1256,12 +1264,14 @@ li.main-navigation:hover .modal-menu-catalog {
   border: 0;
 }
 
-.catalog-item:hover  .btn-look {
+.catalog-item:hover .btn-look,
+.hit-item:hover .btn-look {
   display: block;
   z-index: 2;
 }
 
-.catalog-item:hover a {
+.catalog-item:hover a,
+.hit-item:hover a {
   z-index: 2;
 }
 
@@ -1373,12 +1383,16 @@ a.catalog-page-forward {
     display: block;
 }
 
+ li.user-enter {
+   position: relative;
+ }
+
 .modal-exit {
   position: absolute;
   z-index: 2;
   display: none;
-  top: 59px;
-  right: 235px;
+  top: 35px;
+  right: 0;
   width: 277px;
   height: 214px;
   margin-top: 4px;
@@ -1526,23 +1540,25 @@ td.basket-item-2 + td {
 
 .exit-text:focus,
 .exit-text:hover {
-  width: 220px;
-  height: 35px;
+  width: 222px;
+  height: 37px;
 }
 
 .search-text:focus,
 .search-text:hover {
-  width: 293px;
-  height: 36px;
+  width: 295px;
+  height: 38px;
 }
 
 .modal-connect-form {
-  position: absolute;
+  position: fixed;
   z-index: 20;
   display: none;
-  top: 338px;
-  left: 363px;
+  top: 50%;
+  left: 50%;
   width: 428px;
+  margin-left: -214px;
+  margin-top: -210px;
   padding-left: 24px;
   padding-right: 25px;
   padding-top: 23px;
@@ -1644,11 +1660,9 @@ td.basket-item-2 + td {
 
 .modal-overlay {
   display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -214px;
-  margin-top: -210px;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 10;
   width: 100%;
   height: 100%;
