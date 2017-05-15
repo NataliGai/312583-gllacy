@@ -1,11 +1,8 @@
 body {
-  width: 1200px;
   font-size: 16px;
   line-height: 22px;
   color: rgb(255, 255, 255);
   font-family: "Roboto", "Arial", sans-serif;
-  background-color: #849d8f;
-  margin: 0 auto;
   padding: 0;
 }
 
@@ -273,23 +270,27 @@ li.main-navigation:hover .modal-menu-catalog {
 }
 
 .presentation-wrapper {
-  min-width: 1200px;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
   background: #849d8f url("../img/slide-1.png") no-repeat top center;
   transition: background-image 0.5s easy, background-color 0.5s easy;
 }
 
-.presentation-wrapper::before,
-.presentation-wrapper::after {
+.container::before,
+.container::after {
   content: "";
   visibility: hidden;
 }
 
-.presentation-wrapper::before,
-.presentation-wrapper::after {
+.container::before,
+.container::after {
   background-image: url("../img/slide-1.png");
 }
 
-.presentation-wrapper::after {
+.container::after {
   background-image: url("../img/slide-2.png");
 }
 
@@ -377,30 +378,30 @@ li.main-navigation:hover .modal-menu-catalog {
   background-color: #b2c1b7;
 }
 
-#btn-1:checked ~ .presentation-wrapper #slide-1,
-#btn-2:checked ~ .presentation-wrapper #slide-2,
-#btn-3:checked ~ .presentation-wrapper #slide-3 {
+#btn-1:checked ~ .container #slide-1,
+#btn-2:checked ~ .container #slide-2,
+#btn-3:checked ~ .container #slide-3 {
   display: block;
 }
 
-#btn-1:checked ~ .presentation-wrapper {
+#btn-1:checked ~ .container {
   background-color: #849d8f;
   background-image: url("../img/slide-1.png");
 }
 
-#btn-2:checked ~ .presentation-wrapper {
+#btn-2:checked ~ .container {
   background-color: #8996a6;
   background-image: url("../img/slide-2.png");
 }
 
-#btn-3:checked ~ .presentation-wrapper {
+#btn-3:checked ~ .container {
   background-color: #9d8b84;
   background-image: url("../img/slide-3.png");
 }
 
-#btn-1:checked ~ .presentation-wrapper label[for="btn-1"],
-#btn-2:checked ~ .presentation-wrapper label[for="btn-2"],
-#btn-3:checked ~ .presentation-wrapper label[for="btn-3"] {
+#btn-1:checked ~ .container label[for="btn-1"],
+#btn-2:checked ~ .container label[for="btn-2"],
+#btn-3:checked ~ .container label[for="btn-3"] {
   background-color: #fff;
 }
 
