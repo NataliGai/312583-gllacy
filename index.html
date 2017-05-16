@@ -213,7 +213,7 @@
                 </div>
                 (с 10 до 20 ежедневно)
               </div>
-              <button class="btn">Форма обратной связи</button>
+              <button class="btn btn-form">Форма обратной связи</button>
             </div>
           </div>
           <form action="#" method="post" class="modal-connect-form">
@@ -222,8 +222,8 @@
             </div>
             <button type="button" value="Закрыть" class="modal-connect-close">
             </button>
-            <input type="text" name="user-name" placeholder="Как вас зовут?">
-            <input type="text" name="user-mail" placeholder="Ваша почта для ответа?">
+            <input type="text" name="user-name" placeholder="Как вас зовут?" required>
+            <input type="text" name="user-mail" placeholder="Ваша почта для ответа?" required>
             <textarea name="user-text" placeholder="Напишите что-нибудь...">
             </textarea>
             <input type="submit" value="Отправить" class="btn">
@@ -256,5 +256,6 @@
           </footer>
         </div>
       </main>
+      <script src="js/script.js"></script>
   </body>
 </html>
